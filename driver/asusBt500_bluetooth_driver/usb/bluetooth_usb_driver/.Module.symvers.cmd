@@ -1,0 +1,1 @@
+cmd_/home/jacky/Document/arch/driver/asusBt500_bluetooth_driver/usb/bluetooth_usb_driver/Module.symvers := sed 's/ko$$/o/' /home/jacky/Document/arch/driver/asusBt500_bluetooth_driver/usb/bluetooth_usb_driver/modules.order | scripts/mod/modpost  -a   -o /home/jacky/Document/arch/driver/asusBt500_bluetooth_driver/usb/bluetooth_usb_driver/Module.symvers -e -i Module.symvers  -N -T -
