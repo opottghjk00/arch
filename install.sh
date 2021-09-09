@@ -73,4 +73,5 @@
 
 #emoji fixed
 #cd ~/$HOME/Document/arch/libxft-bgra
+#makepkg -s
 #sudo pacman -U libxft-bgra-2.3.3.r7.7808631e-1-x86_64.pkg.tar.zst
