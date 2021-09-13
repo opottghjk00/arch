@@ -2,10 +2,15 @@
 
 
 # basic utility
-#sudo pacman -S git unzip stow gcin noto-fonts-emoji noto-fonts-cjk texlive-most texlive-lang pass gvim alsa-utils xclip npm wget
+#sudo pacman -S git unzip stow gcin noto-fonts-emoji noto-fonts-cjk texlive-most texlive-lang pass gvim alsa-utils xclip npm wget python-pip man-db exa ninja tk tcl
+#pip install ueberzug
 # basic application
-#sudo pacman -S alacritty qutebrowser nvim nitrogen picom ranger zathura calcurse mpv
+#sudo pacman -S alacritty qutebrowser nvim nitrogen picom ranger zathura calcurse mpv r
 #sudo mv /usr/bin/nvim /usr/bin/v
+
+
+#nvim language server
+#npm i -g pyright        # python
 
 
 # wallpaper
@@ -71,7 +76,22 @@
 #cd $HOME/dotfile
 #stow */ 
 
+
+# miniconda
+#wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O ~/miniconda.sh
+#cd ~
+#sh ~/miniconda.sh -b -f -p  $HOME/.miniconda
+#rm ~/miniconda.sh
+
+# AUR
+
 #emoji fixed
 #cd ~/$HOME/Document/arch/libxft-bgra
 #makepkg -s
 #sudo pacman -U libxft-bgra-2.3.3.r7.7808631e-1-x86_64.pkg.tar.zst
+
+#ccls
+#cd ~/$HOME/Document/arch/ccls-git
+#makepkg -s
+#sudo pacman -U ccls-git-20210626-1-x86_64.pkg.tar.zst
+
