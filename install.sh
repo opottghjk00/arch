@@ -21,35 +21,11 @@
 
 
 
-
-# suckless tool
-
-# ! [ -d $HOME/suckless ] && mkdir $HOME/suckless
-# dependencies
-#sudo pacman -S xorg-xinit xorg-setroot xorg-server imlib2 xorg-xrandr
-
-# slock
-#git clone https://github.com/opottghjk00/slock_rice $HOME/suckless/slock_rice
-#cd $HOME/suckless/slock_rice
-#sudo make install
-
-# dwm
-#git clone https://github.com/opottghjk00/dwm_rice $HOME/suckless/dwm_rice
-#cd $HOME/suckless/dwm_rice
-#sudo make install
-
-#dmenu
-#git clone https://github.com/opottghjk00/dmenu_rice $HOME/suckless/dmenu_rice
-#cd $HOME/suckless/dmenu_rice
-#sudo make install
-
-
-
 # wifi driver
 #sudo pacman -S base-devel dkms bc   # dependencies
 
 # install
-#cd $HOME/Document/arch/driver/rtl8821ce_wifi_driver
+#cd $HOME/repo/github/linux_setup/arch/driver/rtl8821ce_wifi_driver
 #sudo ./dkms-install.sh
 
 
@@ -57,13 +33,36 @@
 # bluetooth driver
 
 # isntall
-#cd $HOME/Document/arch/driver/asusBt500_bluetooth_driver/usb
+#cd $HOME/repo/github/linux_setup/arch/driver/asusBt500_bluetooth_driver/usb
 #sudo make install
 
 #sudo pacman -S bluez bluez-utils                 # dependencies
 #sudo modprobe btusb                              # load the module 
 #sudo systemctl enable bluetooth.service          # enable/start the service
 #sudo systemctl start bluetooth.service
+
+
+
+# suckless tool
+
+# ! [ -d $HOME/repo/github/suckless ] && mkdir $HOME/repo/github/suckless
+# dependencies
+#sudo pacman -S xorg-xinit xorg-setroot xorg-server imlib2 xorg-xrandr
+
+# slock
+#git clone https://github.com/opottghjk00/slock_rice $HOME/repo/github/suckless/slock_rice
+#cd $HOME/repo/github/suckless/slock_rice
+#sudo make install
+
+# dwm
+#git clone https://github.com/opottghjk00/dwm_rice $HOME/repo/github/suckless/dwm_rice
+#cd $HOME/repo/github/suckless/dwm_rice
+#sudo make install
+
+#dmenu
+#git clone https://github.com/opottghjk00/dmenu_rice $HOME/repo/github/suckless/dmenu_rice
+#cd $HOME/repo/github/suckless/dmenu_rice
+#sudo make install
 
 
 
