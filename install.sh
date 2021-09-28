@@ -10,11 +10,11 @@
 
 
 # basic utility
-#sudo aura -S git unzip stow gcin noto-fonts-emoji noto-fonts-cjk texlive-most texlive-lang pass gvim alsa-utils xclip npm wget python-pip man-db exa ninja tk tcl
+#sudo aura -S git unzip stow gcin noto-fonts-emoji noto-fonts-cjk pandoc texlive-most texlive-lang pass gvim alsa-utils xclip npm wget python-pip man-db exa ninja tk tcl xmonad-contrib pulseaudio pulseaudio-bluetooth rofi libnotify
 #pip install ueberzug
 # basic application
-#sudo aura -S alacritty qutebrowser nvim nitrogen picom ranger zathura calcurse mpv r xmonad xmonad-contrib
-#sudo aura -A brave-bin polybar
+#sudo aura -S alacritty qutebrowser nvim nitrogen picom ranger zathura calcurse mpv r xmonad mpd ncmpcpp pulsemixer dunst
+#sudo aura -A brave-bin polybar notion-app mutt-wizard abook
 #sudo mv /usr/bin/nvim /usr/bin/v
 
 
