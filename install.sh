@@ -10,11 +10,11 @@
 
 
 # basic utility
-#sudo aura -S git unzip stow gcin noto-fonts-emoji noto-fonts-cjk pandoc texlive-most texlive-lang pass gvim alsa-utils xclip npm wget python-pip man-db exa ninja tk tcl xmonad-contrib pulseaudio pulseaudio-bluetooth rofi libnotify
+#sudo aura -S git unzip stow gcin noto-fonts-emoji noto-fonts-cjk pandoc texlive-most texlive-lang pass gvim alsa-utils xclip npm wget python-pip man-db exa ninja tk tcl xmonad-contrib pulseaudio pulseaudio-bluetooth rofi libnotify lynx cronie
 #pip install ueberzug
 # basic application
 #sudo aura -S alacritty qutebrowser nvim nitrogen picom ranger zathura calcurse mpv r xmonad mpd ncmpcpp pulsemixer dunst
-#sudo aura -A brave-bin polybar notion-app mutt-wizard abook
+#sudo aura -A brave-bin polybar notion-app mutt-wizard abook miniconda3
 #sudo mv /usr/bin/nvim /usr/bin/v
 
 
@@ -69,13 +69,6 @@
 #git clone https://github.com/opottghjk00/dotfile $HOME/dotfile
 #cd $HOME/dotfile
 #stow */ 
-
-
-# miniconda
-#wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O ~/miniconda.sh
-#cd ~
-#sh ~/miniconda.sh -b -f -p  $HOME/.miniconda
-#rm ~/miniconda.sh
 
 
 # nvim -jupyter notebook set
