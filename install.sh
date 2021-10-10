@@ -14,7 +14,7 @@
 #pip install ueberzug
 # basic application
 #sudo aura -S alacritty qutebrowser nvim nitrogen picom ranger zathura calcurse mpv r xmonad mpd ncmpcpp pulsemixer dunst
-#sudo aura -A brave-bin polybar notion-app mutt-wizard abook miniconda3 rofi-file-browser-extended-git
+#sudo aura -A brave-bin polybar notion-app mutt-wizard abook miniconda3
 #sudo mv /usr/bin/nvim /usr/bin/v
 
 
