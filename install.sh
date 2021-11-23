@@ -3,27 +3,28 @@
 # current working directory is $HOME/repo/github/os_set/arch
 
 
+install_aura() {
+    tar xvzf ./source/aura-bin.tar.gz ./source/aura-bin
+    cd aura-bin
+    makepkg
+    sudo pacman -U aura-bin-3.2.6-1-x86_64.pkg.tar.zst
+}
 
-# package manager -aura
 
-#tar xvzf ./source/aura-bin.tar.gz
-#cd ./source/aura-bin
-#makepkg
-#sudo pacman -U aura-bin-3.2.6-1-x86_64.pkg.tar.zst
-
-
-# basic utility
-#sudo aura -S git unzip stow gcin noto-fonts-emoji noto-fonts-cjk pandoc texlive-most texlive-lang pass gvim alsa-utils xclip npm wget python-pip man-db exa ninja tk tcl xmonad-contrib pulseaudio pulseaudio-bluetooth rofi libnotify lynx cronie zathura-pdf-mupdf cairo-dock-plug-ins
-#pip install ueberzug
-
-# basic application
-#sudo aura -S alacritty qutebrowser nvim nitrogen picom ranger zathura calcurse mpv r xmonad mpd ncmpcpp pulsemixer dunst lxappearance qt5ct pcmanfm cairo-dock
-#sudo aura -A brave-bin polybar notion-app mutt-wizard abook miniconda3 qt5-webengine-widevine
+# install packages
+install_packages() {
+    sudo aura -S git unzip stow gcin noto-fonts-emoji noto-fonts-cjk pandoc texlive-most texlive-lang pass gvim alsa-utils xclip npm wget python-pip man-db exa ninja tk tcl xmonad-contrib pulseaudio pulseaudio-bluetooth libnotify zathura-pdf-mupdf fzf
+    sudo aura -S alacritty qutebrowser nvim nitrogen picom ranger zathura calcurse mpv r xmonad mpd ncmpcpp pulsemixer dunst lxappearance qt5ct pcmanfm cairo-dock rofi
+    sudo aura -A brave-bin polybar notion-app mutt-wizard abook miniconda3 qt5-webengine-widevine grive nvim-packer-git
+    pip install ueberzug
+}
 
 
 # wallpaper
-# ! [ -d $HOME/Document/picture/ ] && mkdir -p $HOME/Document/picture/
-#cp -r ./source/wallpaper ~/Document/picture/wallpaper
+install_wallPaper() {
+    mkdir -p $HOME/Document/picture/
+    cp -r ./source/wallpaper ~/Document/picture/wallpaper
+}
 
 
 
