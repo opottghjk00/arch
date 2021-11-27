@@ -1,6 +1,5 @@
 #!/bin/sh
-# use the command "sudo ./install.sh"
-# current working directory is $HOME/repo/github/os_set/arch
+# use the command "sudo ./install.sh" to configure the necessary setting
 
 
 function aura_install() {
@@ -23,9 +22,12 @@ function packages_install() {
 # configure the dotfile
 function dotfile_set() {
     cd $HOME
+    [[ ! -d .config ]] && mkdir .config
+    mkdir -p .local/bin .local/share
     git clone https://github.com/opottghjk00/dotx.git
-    cd $HOME/dotx
+    cd dotx
     stow */ 
+    sudo cp -f $HOME/.config/mutt/mutt-wizard.muttrc /usr/share/mutt-wizard/mutt-wizard.muttrc
 }
 
 
@@ -56,12 +58,17 @@ function bluetoothDiver_set(){
 
 
 # clone repo
-# slock
 function repo_clone() {
     sudo aura -S xorg-xinit xorg-setroot xorg-server imlib2 xorg-xrandr
     cd $HOME/repo/github/
     git clone https://github.com/opottghjk00/slock_rice.git
-    cd slock_rice
+    git clone https://github.com/opottghjk00/st_rice.git
+    git clone https://github.com/opottghjk00/leet_code_practice.git
+    git clone https://github.com/opottghjk00/sudo_random_password_generator.git
+    git clone https://github.com/opottghjk00/dwm_rice.git
+    cd $HOME/repo/github/slock_rice
+    sudo make install
+    cd $HOME/repo/github/st-rice
     sudo make install
 }
 
