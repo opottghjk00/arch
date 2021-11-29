@@ -4,7 +4,7 @@
 
 function aura_install() {
     tar xvzf ./source/aura-bin.tar.gz
-    cd $HOME/repo/github/os_set/arch/aura-bin
+    cd ./aura-bin
     makepkg
     sudo pacman -U aura-bin-3.2.6-1-x86_64.pkg.tar.zst
 }
@@ -34,21 +34,21 @@ function dotfile_set() {
 # wallpaper
 function wallPaper_set() {
     mkdir -p $HOME/Document/picture/
-    cp -r $HOME/repo/github/os_set/arch/source/wallpaper ~/Document/picture/
+    cp -r $HOME/repo/arch/source/wallpaper ~/Document/picture/
 }
 
 
 # set wifi driver
 function wifiDrier_ser() {
     sudo aura -S base-devel dkms bc   # dependencies
-    cd $HOME/repo/github/os_set/arch/driver/rtl8821ce_wifi_driver
+    cd $HOME/repo/arch/driver/rtl8821ce_wifi_driver
     sudo ./dkms-install.sh
 }
 
 
 # set bluetooth driver
 function bluetoothDiver_set(){
-    cd $HOME/repo/github/os_set/arch/driver/asusBt500_bluetooth_driver/usb
+    cd $HOME/repo/arch/driver/asusBt500_bluetooth_driver/usb
     sudo make install
     sudo aura -S bluez bluez-utils                 # dependencies
     sudo modprobe btusb                              # load the module 
@@ -60,26 +60,32 @@ function bluetoothDiver_set(){
 # clone repo
 function repo_clone() {
     sudo aura -S xorg-xinit xorg-setroot xorg-server imlib2 xorg-xrandr
-    cd $HOME/repo/github/
+    cd $HOME/repo/
     git clone https://github.com/opottghjk00/slock_rice.git
     git clone https://github.com/opottghjk00/st_rice.git
     git clone https://github.com/opottghjk00/leet_code_practice.git
     git clone https://github.com/opottghjk00/sudo_random_password_generator.git
     git clone https://github.com/opottghjk00/dwm_rice.git
-    cd $HOME/repo/github/slock_rice
+    cd $HOME/repo/slock_rice
     sudo make install
-    cd $HOME/repo/github/st-rice
+    cd $HOME/repo/st-rice
     sudo make install
 }
 
 
 # setup themes
 function themes_set() {
-    cd $HOME/repo/github/os_set/arch/source/themes
+    cd $HOME/repo/arch/source/themes
     sudo cp -r Nordic-v40/ Nordic-darker-v40/ Nordic-bluish-accent-v40/ /usr/share/themes
     sudo cp -r Nordzy-cursors/ Nordzy-cursors-white/ Zafiro-Icons-Dark/ Zafiro-Icons-Light/ candy-icons/ /usr/share/icons
 }
 
+
+function google-drive_set() {
+    mkdir -p $HOME/Document/google-drive
+    cd $HOME/Document/google-drive
+    grive -f
+}
 
 # nvim -jupyter notebook set
 #pip install jupyter_ascending
