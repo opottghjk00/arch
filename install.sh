@@ -13,6 +13,9 @@ function aura_install() {
 }
 
 
+function basic_setup()
+
+
 # install packages
 function packages_install() {
     sudo aura -S git unzip stow gcin noto-fonts-emoji noto-fonts-cjk pandoc texlive-most texlive-lang pass gvim alsa-utils xclip npm wget python-pip man-db exa ninja tk tcl xmonad-contrib pulseaudio pulseaudio-bluetooth libnotify zathura-pdf-mupdf fzf zsh zsh-completions
@@ -90,6 +93,7 @@ function google-drive_set() {
     grive -f
 }
 
+
 # nvim -jupyter notebook set
 #pip install jupyter_ascending
 #jupyter nbextension install --py --sys-prefix jupyter_ascending
@@ -99,6 +103,9 @@ function google-drive_set() {
 function set_up() {
     echo "install the package manager arua"
     aura_install
+
+    echo "do the basic setup"
+    basic_setup
 
     echo "install packages"
     packages_install
@@ -123,6 +130,7 @@ function set_up() {
 
     echo "clone the google cloud drive"
     google-drive_set
+
 }
 
 set_up
