@@ -96,3 +96,33 @@ function google-drive_set() {
 #jupyter nbextension     enable jupyter_ascending --sys-prefix --py
 #jupyter serverextension enable jupyter_ascending --sys-prefix --py
 
+function set_up() {
+    echo "install the package manager arua"
+    aura_install
+
+    echo "install packages"
+    packages_install
+
+    echo "set up the dot file"
+    dotfile_set
+
+    echo "install wallpaper"
+    wallPaper_set
+
+    echo "set up the theme"
+    themes_set
+
+    echo "set up wifi card driver"
+    wifiDrier_ser
+
+    echo "set up bluetooth usb driver"
+    bluetoothDiver_set
+
+    echo "download the remote repo"
+    repo_clone
+
+    echo "clone the google cloud drive"
+    google-drive_set
+}
+
+set_up
