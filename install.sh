@@ -20,7 +20,7 @@ function basic_setup()
 function packages_install() {
     sudo aura -S git unzip stow gcin noto-fonts-emoji noto-fonts-cjk pandoc texlive-most texlive-lang pass gvim alsa-utils xclip npm wget python-pip man-db exa ninja tk tcl xmonad-contrib pulseaudio pulseaudio-bluetooth libnotify zathura-pdf-mupdf fzf zsh zsh-completions
     sudo aura -S alacritty qutebrowser nvim nitrogen ranger zathura calcurse mpv r xmonad mpd ncmpcpp pulsemixer dunst lxappearance qt5ct pcmanfm cairo-dock rofi
-    sudo aura -A brave-bin polybar notion-app mutt-wizard abook miniconda3 qt5-webengine-widevine grive nvim-packer-git picom-jonaburg-git
+    sudo aura -A brave-bin polybar mutt-wizard abook miniconda3 qt5-webengine-widevine grive nvim-packer-git picom-jonaburg-git
     pip install ueberzug
 }
 
