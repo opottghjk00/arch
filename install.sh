@@ -10,21 +10,28 @@
 ##################################################
 #		             function 			         #
 ##################################################
+
+# disk partition
+function disk_partition() {}
+
+
+#
+function basic_setup() {}
+
+
+# install package manager aura
 function aura_install() {
-    tar xvzf ./source/aura-bin.tar.gz
-    cd ./aura-bin
+    tar xvzf $HOME/repo/arch/source/aura-bin.tar.gz
+    cd $HOME/repo/arch/aura-bin
     makepkg
     sudo pacman -U aura-bin-3.2.6-1-x86_64.pkg.tar.zst
 }
 
 
-function basic_setup()
-
-
 # install packages
 function packages_install() {
     sudo aura -S git unzip stow gcin noto-fonts-emoji noto-fonts-cjk pandoc texlive-most texlive-lang pass gvim alsa-utils xclip npm wget python-pip man-db exa ninja tk tcl xmonad-contrib pulseaudio pulseaudio-bluetooth libnotify zathura-pdf-mupdf fzf zsh zsh-completions
-    sudo aura -S alacritty qutebrowser nvim nitrogen ranger zathura calcurse mpv r xmonad mpd ncmpcpp pulsemixer dunst lxappearance qt5ct pcmanfm rofi
+    sudo aura -S alacritty qutebrowser neovim nitrogen ranger zathura calcurse mpv r xmonad mpd ncmpcpp pulsemixer dunst lxappearance qt5ct pcmanfm rofi
     sudo aura -A brave-bin polybar mutt-wizard abook miniconda3 qt5-webengine-widevine grive nvim-packer-git picom-jonaburg-git
     pip install ueberzug
 }
@@ -36,7 +43,7 @@ function dotfile_set() {
     [[ ! -d .config ]] && mkdir .config
     mkdir -p .local/bin .local/share
     git clone https://github.com/opottghjk00/dotx.git
-    cd dotx
+    cd $HOME/dotx
     stow */ 
     sudo cp -f $HOME/.config/mutt/mutt-wizard.muttrc /usr/share/mutt-wizard/mutt-wizard.muttrc
 }
@@ -70,7 +77,7 @@ function bluetoothDiver_set(){
 
 # clone repo
 function repo_clone() {
-    sudo aura -S xorg-xinit xorg-setroot xorg-server imlib2 xorg-xrandr
+    sudo aura -S xorg-xinit xorg-xsetroot xorg-server imlib2 xorg-xrandr
     cd $HOME/repo/
     git clone https://github.com/opottghjk00/slock_rice.git
     git clone https://github.com/opottghjk00/st_rice.git
@@ -78,9 +85,9 @@ function repo_clone() {
     git clone https://github.com/opottghjk00/sudo_random_password_generator.git
     git clone https://github.com/opottghjk00/dwm_rice.git
     cd $HOME/repo/slock_rice
-    sudo make install
-    cd $HOME/repo/st-rice
-    sudo make install
+    sudo make clean install
+    cd $HOME/repo/st_rice
+    sudo make clean install
 }
 
 
@@ -116,15 +123,9 @@ function virt-manager_set() {
 #}
 
 
-##################################################
-#		           install process  	         #
-##################################################
-function set_up() {
+function configuration() {
     echo "install the package manager aura"
     aura_install
-
-    echo "do the basic setup"
-    basic_setup
 
     echo "install packages"
     packages_install
@@ -149,7 +150,20 @@ function set_up() {
 
     echo "clone the google cloud drive"
     google-drive_set
-
 }
 
-set_up
+
+##################################################
+#		           install process  	         #
+##################################################
+
+echo "disk partition"
+disk_partition
+
+
+echo "basic setup..."
+basic_setup
+
+
+echo "further configuration..."
+configuration
