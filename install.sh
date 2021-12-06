@@ -5,6 +5,11 @@
 #		             Variables 			         #
 ##################################################
 
+
+
+##################################################
+#		             function 			         #
+##################################################
 function aura_install() {
     tar xvzf ./source/aura-bin.tar.gz
     cd ./aura-bin
@@ -19,7 +24,7 @@ function basic_setup()
 # install packages
 function packages_install() {
     sudo aura -S git unzip stow gcin noto-fonts-emoji noto-fonts-cjk pandoc texlive-most texlive-lang pass gvim alsa-utils xclip npm wget python-pip man-db exa ninja tk tcl xmonad-contrib pulseaudio pulseaudio-bluetooth libnotify zathura-pdf-mupdf fzf zsh zsh-completions
-    sudo aura -S alacritty qutebrowser nvim nitrogen ranger zathura calcurse mpv r xmonad mpd ncmpcpp pulsemixer dunst lxappearance qt5ct pcmanfm cairo-dock rofi
+    sudo aura -S alacritty qutebrowser nvim nitrogen ranger zathura calcurse mpv r xmonad mpd ncmpcpp pulsemixer dunst lxappearance qt5ct pcmanfm rofi
     sudo aura -A brave-bin polybar mutt-wizard abook miniconda3 qt5-webengine-widevine grive nvim-packer-git picom-jonaburg-git
     pip install ueberzug
 }
@@ -94,14 +99,28 @@ function google-drive_set() {
 }
 
 
-# nvim -jupyter notebook set
-#pip install jupyter_ascending
-#jupyter nbextension install --py --sys-prefix jupyter_ascending
-#jupyter nbextension     enable jupyter_ascending --sys-prefix --py
-#jupyter serverextension enable jupyter_ascending --sys-prefix --py
+function virt-manager_set() {
+    sudo aura -S qemu virt-manager ebtables libvirt lxsession
+    sudo systemctl enable libvirtd
+    sudo systemctl start libvirtd
+    sudo usermod -G libvirt -a jacky
+}
 
+
+#function nvim-dataScience-setup() {
+#    nvim -jupyter notebook set
+#    pip install jupyter_ascending
+#    jupyter nbextension install --py --sys-prefix jupyter_ascending
+#    jupyter nbextension     enable jupyter_ascending --sys-prefix --py
+#    jupyter serverextension enable jupyter_ascending --sys-prefix --py
+#}
+
+
+##################################################
+#		           install process  	         #
+##################################################
 function set_up() {
-    echo "install the package manager arua"
+    echo "install the package manager aura"
     aura_install
 
     echo "do the basic setup"
