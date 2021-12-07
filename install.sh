@@ -5,8 +5,6 @@
 ##################################################
 
 hostname="Arch"
-root_password="km2217ob4b"
-user_password="km2217ob4b"
 time_zone="Asia/Taipei"
 
 
@@ -32,11 +30,7 @@ function basic_setup() {
     echo "zh_TW.UTF-8 UTF-8" >> /etc/locale.gen
     locale-gen
 
-    # add root_password
-    echo -en "$root_password\n$root_password" | passwd
-
-    # add user_password
-    echo -en "$user_password\n$user_password" | passwd "$user_name"
+    # add sudo permission
     cat > /etc/sudoers <<EOF
 ## sudoers file.
 ##
