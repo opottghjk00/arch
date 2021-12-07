@@ -6,6 +6,8 @@
 
 hostname="Arch"
 time_zone="Asia/Taipei"
+locale_1="en_US.UTF-8 UTF-8"
+locale_2="zh_TW.UTF-8 UTF-8"
 
 
 ##################################################
@@ -26,8 +28,8 @@ function basic_setup() {
     mkinitcpio -p linux-lts
 
     # locale
-    echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen
-    echo "zh_TW.UTF-8 UTF-8" >> /etc/locale.gen
+    echo $locale_1 >> /etc/locale.gen
+    echo $locale_2 >> /etc/locale.gen
     locale-gen
 
     # grub configuration
@@ -130,14 +132,14 @@ function themes_set() {
 }
 
 
-function google-drive_set() {
+function google_drive_set() {
     mkdir -p $HOME/Document/google-drive
     cd $HOME/Document/google-drive
     grive -f
 }
 
 
-function virt-manager_set() {
+function virt_manager_set() {
     sudo aura -S qemu virt-manager ebtables libvirt lxsession
     sudo systemctl enable libvirtd
     sudo systemctl start libvirtd
@@ -180,7 +182,10 @@ function configuration() {
     repo_clone
 
     echo "clone the google cloud drive"
-    google-drive_set
+    google_drive_set
+
+    echo "set up virt manager"
+    virt_manager_set
 }
 
 
@@ -193,7 +198,6 @@ basic_setup
 
 echo "------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------"
 echo "further configuration..."
-su jacky
 configuration
 
 
