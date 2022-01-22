@@ -1,0 +1,146 @@
+#!/bin/sh
+
+
+##################################################
+#		             function 			         #
+##################################################
+
+# install package manager aura
+function aura_install() {
+    tar xvzf $HOME/repo/arch/source/aura-bin.tar.gz
+    cd $HOME/repo/arch/aura-bin
+    makepkg
+    sudo pacman -U aura-bin-3.2.6-1-x86_64.pkg.tar.zst
+}
+
+
+# install packages
+function packages_install() {
+    sudo aura -S unzip stow gcin noto-fonts-emoji noto-fonts-cjk pandoc texlive-most texlive-lang pass gvim alsa-utils xclip npm wget man-db exa ninja tk tcl xmonad-contrib pulseaudio pulseaudio-bluetooth libnotify zathura-pdf-mupdf fzf zsh zsh-completions
+    sudo aura -S alacritty qutebrowser neovim nitrogen ranger zathura calcurse mpv r xmonad mpd ncmpcpp pulsemixer dunst lxappearance qt5ct pcmanfm rofi
+    sudo aura -A brave-bin polybar mutt-wizard abook miniconda3 qt5-webengine-widevine grive nvim-packer-git picom-jonaburg-git
+    pip install ueberzug
+}
+
+
+# configure the dotfile
+function dotfile_set() {
+    cd $HOME
+    [[ ! -d .config ]] && mkdir .config
+    mkdir -p .local/bin .local/share
+    git clone https://github.com/opottghjk00/dotx.git
+    cd $HOME/dotx
+    stow */ 
+    sudo cp -f $HOME/.config/mutt/mutt-wizard.muttrc /usr/share/mutt-wizard/mutt-wizard.muttrc
+}
+
+
+# wallpaper
+function wallPaper_set() {
+    mkdir -p $HOME/Document/picture/
+    cp -r $HOME/repo/arch/source/wallpaper ~/Document/picture/
+}
+
+
+# set wifi driver
+function wifiDrier_ser() {
+    sudo aura -S dkms bc   # dependencies
+    cd $HOME/repo/arch/driver/rtl8821ce_wifi_driver
+    sudo ./dkms-install.sh
+}
+
+
+# set bluetooth driver
+function bluetoothDiver_set(){
+    cd $HOME/repo/arch/driver/asusBt500_bluetooth_driver/usb
+    sudo make install
+    sudo aura -S bluez bluez-utils                 # dependencies
+    sudo modprobe btusb                              # load the module 
+    sudo systemctl enable bluetooth.service          # enable/start the service
+    sudo systemctl start bluetooth.service
+}
+
+
+# clone repo
+function repo_clone() {
+    sudo aura -S xorg-xinit xorg-xsetroot xorg-server imlib2 xorg-xrandr
+    cd $HOME/repo/
+    git clone https://github.com/opottghjk00/slock_rice.git
+    git clone https://github.com/opottghjk00/st_rice.git
+    git clone https://github.com/opottghjk00/leet_code_practice.git
+    git clone https://github.com/opottghjk00/sudo_random_password_generator.git
+    git clone https://github.com/opottghjk00/dwm_rice.git
+    cd $HOME/repo/slock_rice sudo make clean install
+    cd $HOME/repo/st_rice
+    sudo make clean install
+}
+
+
+# setup themes
+function themes_set() {
+    cd $HOME/repo/arch/source/themes
+    sudo cp -r Nordic-v40/ Nordic-darker-v40/ Nordic-bluish-accent-v40/ /usr/share/themes
+    sudo cp -r Nordzy-cursors/ Nordzy-cursors-white/ Zafiro-Icons-Dark/ Zafiro-Icons-Light/ candy-icons/ /usr/share/icons
+}
+
+
+function google_drive_set() {
+    mkdir -p $HOME/Document/google-drive
+    cd $HOME/Document/google-drive
+    grive -f
+}
+
+
+function virt_manager_set() {
+    sudo aura -S qemu virt-manager ebtables libvirt lxsession
+    sudo systemctl enable libvirtd
+    sudo systemctl start libvirtd
+    sudo usermod -G libvirt -a jacky
+}
+
+
+function configuration() {
+    echo "install the package manager aura"
+    aura_install
+
+    echo "install packages"
+    packages_install
+
+    echo "set up the dot file"
+    dotfile_set
+
+    echo "install wallpaper"
+    wallPaper_set
+
+    echo "set up the theme"
+    themes_set
+
+    echo "set up wifi card driver"
+    wifiDrier_ser
+
+    echo "set up bluetooth usb driver"
+    bluetoothDiver_set
+
+    echo "download the remote repo"
+    repo_clone
+
+    echo "clone the google cloud drive"
+    google_drive_set
+
+    echo "set up virt manager"
+    virt_manager_set
+}
+
+
+##################################################
+#		           install process  	         #
+##################################################
+
+echo "------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------"
+echo "install user prefered packages..."
+configuration
+
+
+echo "------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------"
+echo "reboot..."
+reboot
