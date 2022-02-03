@@ -7,7 +7,7 @@ set the working at $HOME/repo/arch/
 ```
 
 
-# some repo the I fork
+# some repo that I fork
 
 [suckless st terminal](https://st.suckless.org)
 
