@@ -17,4 +17,8 @@ set the working at $HOME/repo/arch/
 
 
 # general theme and icon theme
+[candy icons](https://github.com/EliverLara/candy-icons)
+[Nordic theme](https://github.com/EliverLara/Nordic)
+[Nordzy cursor theme](https://github.com/alvatip/Nordzy-cursors)
+[Zafiro icon theme](https://github.com/zayronxio/Zafiro-icons)
 
