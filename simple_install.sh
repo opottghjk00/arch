@@ -1,9 +1,8 @@
 #!/bin/sh
 
-
-##################################################
-#		             function 			         #
-##################################################
+##################################################################
+#		             function 			                         #
+##################################################################
 
 # install package manager aura
 function aura_install() {
@@ -17,14 +16,17 @@ function aura_install() {
 # install packages
 function packages_install() {
     sudo aura -S unzip stow gcin noto-fonts-emoji noto-fonts-cjk pandoc texlive-most texlive-lang pass gvim alsa-utils xclip npm wget man-db exa ninja tk tcl xmonad-contrib pulseaudio pulseaudio-bluetooth libnotify zathura-pdf-mupdf fzf zsh zsh-completions
-    sudo aura -S alacritty qutebrowser neovim nitrogen ranger zathura calcurse mpv r xmonad mpd ncmpcpp pulsemixer dunst lxappearance qt5ct pcmanfm rofi
-    sudo aura -A brave-bin polybar mutt-wizard abook miniconda3 qt5-webengine-widevine grive nvim-packer-git picom-jonaburg-git
+    sudo aura -S alacritty qutebrowser nitrogen ranger r mpd ncmpcpp pulsemixer dunst lxappearance pcmanfm rofi starship
+    # sudo aura -S mpv (errror)
+    sudo aura -A brave-bin polybar qt5-webengine-widevine grive nvim-packer-git picom-jonaburg-git
+    # sudo aura -A  miniconda3 mutt-wizard abook
     pip install ueberzug
 }
 
 
 # configure the dotfile
 function dotfile_set() {
+    chsh -s /bin/zsh
     cd $HOME
     [[ ! -d .config ]] && mkdir .config
     mkdir -p .local/bin .local/share
@@ -43,10 +45,9 @@ function wallPaper_set() {
 
 
 # set wifi driver
-function wifiDrier_ser() {
-    sudo aura -S dkms bc   # dependencies
-    cd $HOME/repo/arch/driver/rtl8821ce_wifi_driver
-    sudo ./dkms-install.sh
+function enable_tap_click() {
+    cd $HOME/repo/arch/source
+    sudo cp 30-touchpad.conf /etc/X11/xorg.conf.d/
 }
 
 
@@ -69,8 +70,13 @@ function repo_clone() {
     git clone https://github.com/opottghjk00/st_rice.git
     git clone https://github.com/opottghjk00/leet_code_practice.git
     git clone https://github.com/opottghjk00/sudo_random_password_generator.git
-    git clone https://github.com/opottghjk00/dwm_rice.git
-    cd $HOME/repo/slock_rice sudo make clean install
+    git clone https://github.com/opottghjk00/ptt_crawler.git
+    git clone https://github.com/opottghjk00/newsDL.git
+    git clone https://github.com/tomaspinho/rtl8821ce.git
+    cd $HOME/repo/rtl8821ce
+    sudo ./install.sh
+    cd $HOME/repo/slock_rice
+    sudo make clean install
     cd $HOME/repo/st_rice
     sudo make clean install
 }
@@ -84,11 +90,11 @@ function themes_set() {
 }
 
 
-function google_drive_set() {
-    mkdir -p $HOME/Document/google-drive
-    cd $HOME/Document/google-drive
-    grive -f
-}
+#function google_drive_set() {
+#    mkdir -p $HOME/Document/google-drive
+#    cd $HOME/Document/google-drive
+#    grive -a
+#}
 
 
 function virt_manager_set() {
@@ -99,48 +105,57 @@ function virt_manager_set() {
 }
 
 
-function configuration() {
-    echo "install the package manager aura"
-    aura_install
+###################################################################
+#		                install process  	                      #
+###################################################################
 
-    echo "install packages"
-    packages_install
+echo "-----------------------------------------------------------------------------"
+echo "install the package manager aura"
+echo "-----------------------------------------------------------------------------"
+aura_install
 
-    echo "set up the dot file"
-    dotfile_set
+echo "-----------------------------------------------------------------------------"
+echo "install packages"
+echo "-----------------------------------------------------------------------------"
+packages_install
 
-    echo "install wallpaper"
-    wallPaper_set
+echo "-----------------------------------------------------------------------------"
+echo "set up the dot file"
+echo "-----------------------------------------------------------------------------"
+dotfile_set
 
-    echo "set up the theme"
-    themes_set
+echo "-----------------------------------------------------------------------------"
+echo "install wallpaper"
+echo "-----------------------------------------------------------------------------"
+wallPaper_set
 
-    echo "set up wifi card driver"
-    wifiDrier_ser
-
-    echo "set up bluetooth usb driver"
-    bluetoothDiver_set
-
-    echo "download the remote repo"
-    repo_clone
-
-    echo "clone the google cloud drive"
-    google_drive_set
-
-    echo "set up virt manager"
-    virt_manager_set
-}
+echo "-----------------------------------------------------------------------------"
+echo "set up the theme"
+echo "-----------------------------------------------------------------------------"
+themes_set
 
 
-##################################################
-#		           install process  	         #
-##################################################
+echo "-----------------------------------------------------------------------------"
+echo "enable tap click"
+echo "-----------------------------------------------------------------------------"
+enable_tap_click
 
-echo "------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------"
-echo "install user prefered packages..."
-configuration
+echo "-----------------------------------------------------------------------------"
+echo "set up bluetooth usb driver"
+echo "-----------------------------------------------------------------------------"
+bluetoothDiver_set
 
+echo "-----------------------------------------------------------------------------"
+echo "download the remote repo and have basic setup"
+echo "-----------------------------------------------------------------------------"
+repo_clone
 
-echo "------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------"
+echo "-----------------------------------------------------------------------------"
+echo "set up virt manager"
+echo "-----------------------------------------------------------------------------"
+virt_manager_set
+
+echo "-----------------------------------------------------------------------------"
 echo "reboot..."
+echo "-----------------------------------------------------------------------------"
 reboot
