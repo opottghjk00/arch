@@ -55,6 +55,8 @@ function basic_config() {
     cd $HOME/repo/arch/res/repo/st_rice
     sudo make clean install
     # grub theme
+    cd $HOME/repo/arch/res/repo/grub_theme
+    sudo ./install.sh
 }
 
 

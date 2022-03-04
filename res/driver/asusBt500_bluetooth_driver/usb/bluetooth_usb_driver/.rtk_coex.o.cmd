@@ -1,8 +1,8 @@
-cmd_/home/jacky/repo/arch/driver/asusBt500_bluetooth_driver/usb/bluetooth_usb_driver/rtk_coex.o := gcc -Wp,-MMD,/home/jacky/repo/arch/driver/asusBt500_bluetooth_driver/usb/bluetooth_usb_driver/.rtk_coex.o.d -nostdinc -isystem /usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/include -I./arch/x86/include -I./arch/x86/include/generated  -I./include -I./arch/x86/include/uapi -I./arch/x86/include/generated/uapi -I./include/uapi -I./include/generated/uapi -include ./include/linux/compiler-version.h -include ./include/linux/kconfig.h -include ./include/linux/compiler_types.h -D__KERNEL__ -fmacro-prefix-map=./= -Wall -Wundef -Werror=strict-prototypes -Wno-trigraphs -fno-strict-aliasing -fno-common -fshort-wchar -fno-PIE -Werror=implicit-function-declaration -Werror=implicit-int -Werror=return-type -Wno-format-security -std=gnu89 -mno-sse -mno-mmx -mno-sse2 -mno-3dnow -mno-avx -fcf-protection=none -m64 -falign-jumps=1 -falign-loops=1 -mno-80387 -mno-fp-ret-in-387 -mpreferred-stack-boundary=3 -mskip-rax-setup -mtune=generic -mno-red-zone -mcmodel=kernel -Wno-sign-compare -fno-asynchronous-unwind-tables -mindirect-branch=thunk-extern -mindirect-branch-register -fno-jump-tables -fno-delete-null-pointer-checks -Wno-frame-address -Wno-format-truncation -Wno-format-overflow -Wno-address-of-packed-member -O2 -fno-allow-store-data-races -Wframe-larger-than=2048 -fstack-protector-strong -Wimplicit-fallthrough=5 -Wno-main -Wno-unused-but-set-variable -Wno-unused-const-variable -fno-stack-clash-protection -fzero-call-used-regs=used-gpr -g -gdwarf-4 -pg -mrecord-mcount -mfentry -DCC_USING_FENTRY -Wdeclaration-after-statement -Wvla -Wno-pointer-sign -Wno-stringop-truncation -Wno-zero-length-bounds -Wno-array-bounds -Wno-stringop-overflow -Wno-restrict -Wno-maybe-uninitialized -fno-strict-overflow -fno-stack-check -fconserve-stack -Werror=date-time -Werror=incompatible-pointer-types -Werror=designated-init -Wno-packed-not-aligned -fplugin=./scripts/gcc-plugins/structleak_plugin.so -fplugin-arg-structleak_plugin-byref-all -DSTRUCTLEAK_PLUGIN  -DMODULE  -DKBUILD_BASENAME='"rtk_coex"' -DKBUILD_MODNAME='"rtk_btusb"' -D__KBUILD_MODNAME=kmod_rtk_btusb -c -o /home/jacky/repo/arch/driver/asusBt500_bluetooth_driver/usb/bluetooth_usb_driver/rtk_coex.o /home/jacky/repo/arch/driver/asusBt500_bluetooth_driver/usb/bluetooth_usb_driver/rtk_coex.c
+cmd_/home/jacky/repo/arch/res/driver/asusBt500_bluetooth_driver/usb/bluetooth_usb_driver/rtk_coex.o := gcc -Wp,-MMD,/home/jacky/repo/arch/res/driver/asusBt500_bluetooth_driver/usb/bluetooth_usb_driver/.rtk_coex.o.d -nostdinc -isystem /usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/include -I./arch/x86/include -I./arch/x86/include/generated  -I./include -I./arch/x86/include/uapi -I./arch/x86/include/generated/uapi -I./include/uapi -I./include/generated/uapi -include ./include/linux/compiler-version.h -include ./include/linux/kconfig.h -include ./include/linux/compiler_types.h -D__KERNEL__ -fmacro-prefix-map=./= -Wall -Wundef -Werror=strict-prototypes -Wno-trigraphs -fno-strict-aliasing -fno-common -fshort-wchar -fno-PIE -Werror=implicit-function-declaration -Werror=implicit-int -Werror=return-type -Wno-format-security -std=gnu89 -mno-sse -mno-mmx -mno-sse2 -mno-3dnow -mno-avx -fcf-protection=none -m64 -falign-jumps=1 -falign-loops=1 -mno-80387 -mno-fp-ret-in-387 -mpreferred-stack-boundary=3 -mskip-rax-setup -mtune=generic -mno-red-zone -mcmodel=kernel -Wno-sign-compare -fno-asynchronous-unwind-tables -mindirect-branch=thunk-extern -mindirect-branch-register -fno-jump-tables -fno-delete-null-pointer-checks -Wno-frame-address -Wno-format-truncation -Wno-format-overflow -Wno-address-of-packed-member -O2 -fno-allow-store-data-races -Wframe-larger-than=2048 -fstack-protector-strong -Wimplicit-fallthrough=5 -Wno-main -Wno-unused-but-set-variable -Wno-unused-const-variable -fno-stack-clash-protection -fzero-call-used-regs=used-gpr -g -gdwarf-4 -pg -mrecord-mcount -mfentry -DCC_USING_FENTRY -Wdeclaration-after-statement -Wvla -Wno-pointer-sign -Wno-stringop-truncation -Wno-zero-length-bounds -Wno-array-bounds -Wno-stringop-overflow -Wno-restrict -Wno-maybe-uninitialized -fno-strict-overflow -fno-stack-check -fconserve-stack -Werror=date-time -Werror=incompatible-pointer-types -Werror=designated-init -Wno-packed-not-aligned -fplugin=./scripts/gcc-plugins/structleak_plugin.so -fplugin-arg-structleak_plugin-byref-all -DSTRUCTLEAK_PLUGIN  -DMODULE  -DKBUILD_BASENAME='"rtk_coex"' -DKBUILD_MODNAME='"rtk_btusb"' -D__KBUILD_MODNAME=kmod_rtk_btusb -c -o /home/jacky/repo/arch/res/driver/asusBt500_bluetooth_driver/usb/bluetooth_usb_driver/rtk_coex.o /home/jacky/repo/arch/res/driver/asusBt500_bluetooth_driver/usb/bluetooth_usb_driver/rtk_coex.c
 
-source_/home/jacky/repo/arch/driver/asusBt500_bluetooth_driver/usb/bluetooth_usb_driver/rtk_coex.o := /home/jacky/repo/arch/driver/asusBt500_bluetooth_driver/usb/bluetooth_usb_driver/rtk_coex.c
+source_/home/jacky/repo/arch/res/driver/asusBt500_bluetooth_driver/usb/bluetooth_usb_driver/rtk_coex.o := /home/jacky/repo/arch/res/driver/asusBt500_bluetooth_driver/usb/bluetooth_usb_driver/rtk_coex.c
 
-deps_/home/jacky/repo/arch/driver/asusBt500_bluetooth_driver/usb/bluetooth_usb_driver/rtk_coex.o := \
+deps_/home/jacky/repo/arch/res/driver/asusBt500_bluetooth_driver/usb/bluetooth_usb_driver/rtk_coex.o := \
   include/linux/compiler-version.h \
     $(wildcard include/config/CC_VERSION_TEXT) \
   include/linux/kconfig.h \
@@ -1441,7 +1441,7 @@ deps_/home/jacky/repo/arch/driver/asusBt500_bluetooth_driver/usb/bluetooth_usb_d
   include/net/bluetooth/hci.h \
   include/net/bluetooth/hci_sock.h \
   include/net/bluetooth/l2cap.h \
-  /home/jacky/repo/arch/driver/asusBt500_bluetooth_driver/usb/bluetooth_usb_driver/rtk_coex.h \
+  /home/jacky/repo/arch/res/driver/asusBt500_bluetooth_driver/usb/bluetooth_usb_driver/rtk_coex.h \
   include/linux/usb.h \
     $(wildcard include/config/USB_MON) \
     $(wildcard include/config/USB) \
@@ -1450,7 +1450,7 @@ deps_/home/jacky/repo/arch/driver/asusBt500_bluetooth_driver/usb/bluetooth_usb_d
   include/linux/usb/ch9.h \
   include/uapi/linux/usb/ch9.h \
   include/linux/pm_runtime.h \
-  /home/jacky/repo/arch/driver/asusBt500_bluetooth_driver/usb/bluetooth_usb_driver/rtk_bt.h \
+  /home/jacky/repo/arch/res/driver/asusBt500_bluetooth_driver/usb/bluetooth_usb_driver/rtk_bt.h \
   include/linux/cdev.h \
   include/linux/firmware.h \
     $(wildcard include/config/FW_LOADER) \
@@ -1471,6 +1471,6 @@ deps_/home/jacky/repo/arch/driver/asusBt500_bluetooth_driver/usb/bluetooth_usb_d
   include/uapi/linux/mempolicy.h \
   include/linux/freezer.h \
 
-/home/jacky/repo/arch/driver/asusBt500_bluetooth_driver/usb/bluetooth_usb_driver/rtk_coex.o: $(deps_/home/jacky/repo/arch/driver/asusBt500_bluetooth_driver/usb/bluetooth_usb_driver/rtk_coex.o)
+/home/jacky/repo/arch/res/driver/asusBt500_bluetooth_driver/usb/bluetooth_usb_driver/rtk_coex.o: $(deps_/home/jacky/repo/arch/res/driver/asusBt500_bluetooth_driver/usb/bluetooth_usb_driver/rtk_coex.o)
 
-$(deps_/home/jacky/repo/arch/driver/asusBt500_bluetooth_driver/usb/bluetooth_usb_driver/rtk_coex.o):
+$(deps_/home/jacky/repo/arch/res/driver/asusBt500_bluetooth_driver/usb/bluetooth_usb_driver/rtk_coex.o):
