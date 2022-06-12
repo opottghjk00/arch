@@ -22,7 +22,7 @@ function AUR_packages_install(){
     git clone https://aur.archlinux.org/yay.git $HOME/open_source/yay
     cd $HOME/open_source/yay
     makepkg -si
-    sudo yay -S brave-bin polybar miniconda3 grive picom-jonaburg-git notion-app
+    sudo yay -S brave-bin polybar miniconda3 grive picom-jonaburg-git notion-app julia-git
 }
 
 
