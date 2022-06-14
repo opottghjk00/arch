@@ -1,9 +1,9 @@
-# Linux Arch distribution set up
+# Arch linux set up
 *this is my own configuration of arch linux*
 
 
 ### screen shot 
-- [desktop](./picture/01)
+![desktop](./picture/01.png)
 
 ### window manager and status bar
 - [Xorg](https://wiki.archlinux.org/title/Xorg)
