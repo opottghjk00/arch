@@ -5,6 +5,13 @@
 ### screen shot 
 ![desktop](./picture/01.png)
 
+
+### configuration
+- you can find all my dot file and some shell script here - [dotx]()
+    - shell script is under **local** directory
+- neovim configuration - [nvimIDE](https://github.com/opottghjk00/nvimIDE)
+
+
 ### window manager and status bar
 - [Xorg](https://wiki.archlinux.org/title/Xorg)
 - [Xmonad](https://github.com/xmonad/xmonad)
@@ -24,28 +31,15 @@
     - [starship](https://github.com/starship/starship)
 
 - package manager
-    - arch standard package manager
-        - [Pacman](https://wiki.archlinux.org/title/Pacman)
-    - AUR(arch user repository) helper
-    - [yay](https://github.com/Jguer/yay)
+    - arch standard package manager - [Pacman](https://wiki.archlinux.org/title/Pacman)
+    - AUR(arch user repository) helper - [yay](https://github.com/Jguer/yay)
 
-- program launcher, window switcher
-    - [rofi](https://github.com/davatorium/rofi)
+- program launcher, window switcher - [rofi](https://github.com/davatorium/rofi)
 
-- text editor
-    - [neovim](https://github.com/neovim/neovim)
+- text editor - [neovim](https://github.com/neovim/neovim)
 
-- browser
-    - [waterfox](https://github.com/WaterfoxCo/Waterfox)
+- browser - [waterfox](https://github.com/WaterfoxCo/Waterfox)
 
 - file manager
-    - GUI
-        - [PCManFM](https://wiki.archlinux.org/title/PCManFM)
-    - CLI
-        - [lf](https://github.com/gokcehan/lf)
-
-
-### configuration
-- you can find all my configuration and some shell script here - [dotx]()
-    - shell script is under **local** directory
-- neovim configuration - [nvimIDE](https://github.com/opottghjk00/nvimIDE)
+    - GUI - [PCManFM](https://wiki.archlinux.org/title/PCManFM)
+    - CLI - [lf](https://github.com/gokcehan/lf)
