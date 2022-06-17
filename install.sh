@@ -8,8 +8,8 @@
 # basic packages install
 function basic_packages_install(){
     sudo pacman -S linux-lts-headers base-devel gcin noto-fonts-emoji noto-fonts-cjk dkms bc
-    sudo pacman -S xorg-xinit xorg-xsetroot xorg-server imlib2 xorg-xrandr bpytop ranger
-    sudo pacman -S zsh zsh-completions pass unzip neofetch maim picom
+    sudo pacman -S xorg-xinit xorg-xsetroot xorg-server imlib2 xorg-xrandr bpytop ranger gimp
+    sudo pacman -S zsh zsh-completions pass unzip neofetch maim picom 
     sudo pacman -S xclip npm wget man-db exa ninja tk tcl xmonad-contrib libnotify fzf
     sudo pacman -S alacritty nitrogen mpv r xmonad dunst lxappearance pcmanfm rofi starship
 }

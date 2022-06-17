@@ -45,6 +45,10 @@
     - CLI - [ranger](https://github.com/ranger/ranger)
 
 
+- window locker - [slock](https://tools.suckless.org/slock/)
+    - [configuration](https://github.com/opottghjk00/slock_rice)
+
+
 ### special thanks
 *without them it's impossible to set the arch linux from scratch*
 
