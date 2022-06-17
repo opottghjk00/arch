@@ -9,7 +9,6 @@
 ## configuration
 - you can find all my dot file and some shell script here - [dotx](https://github.com/opottghjk00/dotx)
     - shell script is under **local** directory
-- neovim configuration - [nvimIDE](https://github.com/opottghjk00/nvimIDE)
 
 
 ## window manager and status bar
@@ -21,8 +20,7 @@
 ## necessary program as a desktop
 - terminal
     - [alacritty](https://github.com/alacritty/alacritty)
-    - [st](https://st.suckless.org/)
-        - [configuration](https://github.com/opottghjk00/st_rice)
+    - [st](https://st.suckless.org/) ([my own configuration](https://github.com/opottghjk00/st_rice))
 - shell, plugins and prompt
     - [zsh](https://wiki.archlinux.org/title/Zsh)
         - [zsh-auotpair](https://github.com/hlissner/zsh-autopair)
@@ -35,8 +33,7 @@
 
 - program launcher, window switcher - [rofi](https://github.com/davatorium/rofi)
 
-- text editor - [neovim](https://github.com/neovim/neovim)
-    - [configuration](https://github.com/opottghjk00/nvimIDE)
+- text editor - [neovim](https://github.com/neovim/neovim) ([my own configuration](https://github.com/opottghjk00/nvimIDE))
 
 - browser - [waterfox](https://github.com/WaterfoxCo/Waterfox)
 
@@ -45,8 +42,7 @@
     - CLI - [ranger](https://github.com/ranger/ranger)
 
 
-- window locker - [slock](https://tools.suckless.org/slock/)
-    - [configuration](https://github.com/opottghjk00/slock_rice)
+- window locker - [slock](https://tools.suckless.org/slock/) ([my own configuration](https://github.com/opottghjk00/slock_rice))
 
 
 ## special thanks
