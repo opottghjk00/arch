@@ -7,7 +7,7 @@
 
 
 ### configuration
-- you can find all my dot file and some shell script here - [dotx]()
+- you can find all my dot file and some shell script here - [dotx](https://github.com/opottghjk00/dotx)
     - shell script is under **local** directory
 - neovim configuration - [nvimIDE](https://github.com/opottghjk00/nvimIDE)
 
@@ -22,7 +22,7 @@
 - terminal
     - [alacritty](https://github.com/alacritty/alacritty)
     - [st](https://st.suckless.org/)
-        - patches:
+        - [configuration](https://github.com/opottghjk00/st_rice)
 - shell, plugins and prompt
     - [zsh](https://wiki.archlinux.org/title/Zsh)
         - [zsh-auotpair](https://github.com/hlissner/zsh-autopair)
@@ -30,16 +30,29 @@
         - [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
     - [starship](https://github.com/starship/starship)
 
-- package manager
-    - arch standard package manager - [Pacman](https://wiki.archlinux.org/title/Pacman)
-    - AUR(arch user repository) helper - [yay](https://github.com/Jguer/yay)
+- AUR(arch user repository)
+    - [yay](https://github.com/Jguer/yay)
 
 - program launcher, window switcher - [rofi](https://github.com/davatorium/rofi)
 
 - text editor - [neovim](https://github.com/neovim/neovim)
+    - [configuration](https://github.com/opottghjk00/nvimIDE)
 
 - browser - [waterfox](https://github.com/WaterfoxCo/Waterfox)
 
 - file manager
     - GUI - [PCManFM](https://wiki.archlinux.org/title/PCManFM)
-    - CLI - [lf](https://github.com/gokcehan/lf)
+    - CLI - [ranger](https://github.com/ranger/ranger)
+
+
+### special thanks
+*without them it's impossible to set the arch linux from scratch*
+
+- [Youtube - DistroTube](https://www.youtube.com/c/DistroTube)
+    - [gitlab](https://gitlab.com/dwt1)
+- [Youtube - chris@machine](https://www.youtube.com/c/ChrisAtMachine)
+    - [github](https://github.com/ChristianChiarulli)
+- [Youtube - Luke Smith](https://www.youtube.com/c/LukeSmithxyz)
+    - [github](https://github.com/LukeSmithxyz)
+- [Youtube - Brodie Roberson](https://www.youtube.com/c/BrodieRobertson)
+    - [github](https://github.com/BrodieRobertson)
