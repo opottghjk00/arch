@@ -3,26 +3,22 @@
 
 
 ## screen shot 
----
 ![desktop](./picture/01.png)
 
 
 ## configuration
----
 - you can find all my dot file and some shell script here - [dotx](https://github.com/opottghjk00/dotx)
     - shell script is under **local** directory
 - neovim configuration - [nvimIDE](https://github.com/opottghjk00/nvimIDE)
 
 
 ## window manager and status bar
----
 - [Xorg](https://wiki.archlinux.org/title/Xorg)
 - [Xmonad](https://github.com/xmonad/xmonad)
 - [polybar](https://github.com/polybar/polybar)
 
 
 ## necessary program as a desktop
----
 - terminal
     - [alacritty](https://github.com/alacritty/alacritty)
     - [st](https://st.suckless.org/)
@@ -54,7 +50,6 @@
 
 
 ## special thanks
----
 *without them it's impossible to set the arch linux from scratch*
 
 - [Youtube - DistroTube](https://www.youtube.com/c/DistroTube)
