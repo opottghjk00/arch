@@ -53,9 +53,13 @@ function dotfile_set(){
     mkdir -p $HOME/.local/bin $HOME/.local/share
     git clone https://github.com/opottghjk00/dotx.git $HOME/dotx
     cd $HOME/dotx/local/.local/bin
-    sudo chmod u+x *
+    chmod u+x *
     cd $HOME/dotx/ranger/.config/ranger
-    sudo chmod u+x scope.sh
+    chmod u+x scope.sh
+    cd $HOME/dotx/polybar/.config/polybar
+    chmod u+x install.sh
+    cd $HOME/dotx/polybar/.config/polybar/weather
+    chmod u+x weather.sh
     cd $HOME/dotx
     stow */ 
 }
