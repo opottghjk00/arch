@@ -2,16 +2,16 @@
 
 
 ##################################################################
-#		             function 			         #
+#		                      function 			                 #
 ##################################################################
 
 # basic packages install
 function basic_packages_install(){
     sudo pacman -S linux-lts-headers base-devel gcin noto-fonts-emoji noto-fonts-cjk dkms bc
-    sudo pacman -S xorg-xinit xorg-xsetroot xorg-server imlib2 xorg-xrandr btop ranger gimp
+    sudo pacman -S xorg-xinit xorg-xsetroot xorg-server imlib2 xorg-xrandr btop ranger gimp mpd
     sudo pacman -S zsh zsh-completions pass unzip neofetch maim picom 
     sudo pacman -S xclip npm wget man-db exa ninja tk tcl xmonad-contrib libnotify fzf
-    sudo pacman -S alacritty nitrogen mpv r xmonad dunst lxappearance pcmanfm rofi starship
+    sudo pacman -S alacritty nitrogen r xmonad dunst lxappearance pcmanfm rofi starship
 }
 
 
@@ -41,7 +41,11 @@ function AUR_packages_install(){
     ###########################################"
     ###            install polybar          ###"
     ###########################################"
-    sudo yay -S polybar
+    yay -S polybar
+    ###########################################"
+    ###      install st glyph support       ###"
+    ###########################################"
+    yay -S libxft-bgra
 }
 
 
@@ -67,7 +71,9 @@ function dotfile_set(){
 function additional_system_setup(){
     chsh -s /bin/zsh
     sudo cp $HOME/repo/archSetup/res/utils/30-touchpad.conf /etc/X11/xorg.conf.d/30-touchpad.conf
+    # python packages
     pip install ueberzug
+    # julia packages
 }
 
 # setup documentation work
@@ -79,8 +85,11 @@ function documentation_setup(){
 
 
 # setup sound system
-# function sound_system_setup(){
-# }
+function sound_system_setup(){
+    sudo pacman -S mpv mpd pulsemixer ncmpcpp youtube-dl
+    sudo systemctl enable mpd
+    sudo systemctl start mpd
+}
 
 
 # wallpaper
@@ -191,11 +200,11 @@ echo "###########################################"
 documentation_setup
 echo -e "\n\n"
 
-# echo "###########################################"
-# echo "###          sound system setup         ###"
-# 1echo "###########################################"
-# sound_system_setup
-# echo -e "\n\n"
+echo "###########################################"
+echo "###          sound system setup         ###"
+echo "###########################################"
+sound_system_setup
+echo -e "\n\n"
 
 echo "###########################################"
 echo "###           wall paper setup          ###"
