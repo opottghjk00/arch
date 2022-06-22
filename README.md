@@ -56,3 +56,4 @@
     - [github](https://github.com/LukeSmithxyz)
 - [Youtube - Brodie Roberson](https://www.youtube.com/c/BrodieRobertson)
     - [github](https://github.com/BrodieRobertson)
+- [better bettery setup](https://github.com/BigAnteater/BetterBattery)

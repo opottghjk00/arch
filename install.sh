@@ -9,7 +9,7 @@
 function basic_packages_install(){
     sudo pacman -S linux-lts-headers base-devel gcin noto-fonts-emoji noto-fonts-cjk dkms bc
     sudo pacman -S xorg-xinit xorg-xsetroot xorg-server imlib2 xorg-xrandr btop ranger gimp mpd
-    sudo pacman -S zsh zsh-completions pass unzip neofetch maim picom tlp
+    sudo pacman -S zsh zsh-completions pass unzip neofetch maim picom
     sudo pacman -S xclip npm wget man-db exa ninja tk tcl xmonad-contrib libnotify fzf
     sudo pacman -S alacritty nitrogen r xmonad dunst lxappearance pcmanfm rofi starship
 }
@@ -71,11 +71,10 @@ function dotfile_set(){
 function additional_system_setup(){
     chsh -s /bin/zsh  # change the default shell
     sudo cp $HOME/repo/archSetup/res/utils/30-touchpad.conf /etc/X11/xorg.conf.d/30-touchpad.conf  # enable tap click
-    # tlp set up
-    sudo systemctl mask systemd-rfkill.service
-    sudo systemctl mask systemd-rfkill.socket
-    sudo systemctl enable tlp
-    sudo systemctl start tlp
+    # tlp auto-cpufreq set up
+    cd $HOME/repo/archSetup/res/BetterBattery
+    chmod u+x jumpstart.sh
+    sudo ./jumpstart.sh
     # python packages
     pip install ueberzug
     # julia packages
