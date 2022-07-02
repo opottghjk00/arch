@@ -6,10 +6,11 @@
 ![desktop](./img/01.png)
 
 
-## configuration
-
-
 ### [detail](https://opottghjk00.github.io/content/ArchSetup/index.html)
+
+
+## usage
+- use the script to set up the desktop environment when after proceeding arch installation script
 
 
 ## special thanks
