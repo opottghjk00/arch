@@ -9,7 +9,7 @@
 ## configuration
 
 
-## [detail](https://opottghjk00.github.io/content/ArchSetup/index.html)
+### [detail](https://opottghjk00.github.io/content/ArchSetup/index.html)
 
 
 ## special thanks
