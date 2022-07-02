@@ -7,13 +7,9 @@
 
 
 ## configuration
-- my dot file and some shell script - [dotx](https://github.com/opottghjk00/dotx)
-    - shell script is under **local** directory
-- text editor: Neovim - [nvimIDE](https://github.com/opottghjk00/nvimIDE)
 
 
-## more information
-- [detail](https://opottghjk00.github.io/content/ArchSetup/index.html)
+## [detail](https://opottghjk00.github.io/content/ArchSetup/index.html)
 
 
 ## special thanks
