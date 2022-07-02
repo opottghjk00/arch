@@ -3,46 +3,17 @@
 
 
 ## screen shot 
-![desktop](./picture/01.png)
+![desktop](./img/01.png)
 
 
 ## configuration
-- you can find all my dot file and some shell script here - [dotx](https://github.com/opottghjk00/dotx)
+- my dot file and some shell script - [dotx](https://github.com/opottghjk00/dotx)
     - shell script is under **local** directory
+- text editor: Neovim - [nvimIDE](https://github.com/opottghjk00/nvimIDE)
 
 
-## window manager and status bar
-- [Xorg](https://wiki.archlinux.org/title/Xorg)
-- [Xmonad](https://github.com/xmonad/xmonad)
-- [polybar](https://github.com/polybar/polybar)
-
-
-## necessary program as a desktop
-- terminal
-    - [alacritty](https://github.com/alacritty/alacritty)
-    - [st](https://st.suckless.org/) ([my own configuration](https://github.com/opottghjk00/st_rice))
-- shell, plugins and prompt
-    - [zsh](https://wiki.archlinux.org/title/Zsh)
-        - [zsh-auotpair](https://github.com/hlissner/zsh-autopair)
-        - [zsh-autosuggesion](https://github.com/zsh-users/zsh-autosuggestions)
-        - [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
-    - [starship](https://github.com/starship/starship)
-
-- AUR(arch user repository)
-    - [yay](https://github.com/Jguer/yay)
-
-- program launcher, window switcher - [rofi](https://github.com/davatorium/rofi)
-
-- text editor - [neovim](https://github.com/neovim/neovim) ([my own configuration](https://github.com/opottghjk00/nvimIDE))
-
-- browser - [waterfox](https://github.com/WaterfoxCo/Waterfox)
-
-- file manager
-    - GUI - [PCManFM](https://wiki.archlinux.org/title/PCManFM)
-    - CLI - [ranger](https://github.com/ranger/ranger)
-
-
-- window locker - [slock](https://tools.suckless.org/slock/) ([my own configuration](https://github.com/opottghjk00/slock_rice))
+## more information
+- [detail](https://opottghjk00.github.io/content/ArchSetup/index.html)
 
 
 ## special thanks

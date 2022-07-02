@@ -9,27 +9,21 @@
 function basic_packages_install(){
     sudo pacman -S linux-lts-headers base-devel gcin noto-fonts-emoji noto-fonts-cjk dkms bc
     sudo pacman -S xorg-xinit xorg-xsetroot xorg-server imlib2 xorg-xrandr btop ranger gimp mpd
-    sudo pacman -S zsh zsh-completions pass unzip neofetch maim picom
+    sudo pacman -S zsh zsh-completions pass unzip neofetch maim picom lazygit firefox
     sudo pacman -S xclip npm wget man-db exa ninja tk tcl xmonad-contrib libnotify fzf
-    sudo pacman -S alacritty nitrogen r xmonad dunst lxappearance pcmanfm rofi starship
+    sudo pacman -S alacritty nitrogen xmonad dunst lxappearance pcmanfm rofi starship
+    #additional application
+    sudo pacman -S obs-studio r
 }
 
 
 # install AUR helper
 function AUR_packages_install(){
-    [[ ! -d $HOME/Document ]] && mkdir $HOME/Document
-    mkdir -p $HOME/Document/open_source
+    [[ ! -d $HOME/document ]] && mkdir $HOME/document
+    mkdir -p $HOME/document/open_source
     git clone https://aur.archlinux.org/yay.git $HOME/Document/open_source/yay
-    cd $HOME/Document/open_source/yay
+    cd $HOME/document/open_source/yay
     makepkg -si
-    ###########################################"
-    ###         install miniconda3          ###"
-    ###########################################"
-    yay -S miniconda3
-    ###########################################"
-    ###         install waterforx           ###"
-    ###########################################"
-    yay -S waterfox-g4-bin
     ###########################################"
     ###         install julia-bin           ###"
     ###########################################"
@@ -66,6 +60,9 @@ function dotfile_set(){
     chmod u+x weather.sh
     cd $HOME/dotx
     stow */ 
+    cd $HOME/dotx/ranger/.config/ranger/plugins/ranger_devicons
+    git submodule init
+    git submodule update
 }
 
 function additional_system_setup(){
@@ -98,8 +95,8 @@ function sound_system_setup(){
 
 # wallpaper
 function wallPaper_setup(){
-    mkdir -p $HOME/Document/picture
-    ln -s $HOME/repo/archSetup/res/wallPaper ~/Document/picture/wallPaper
+    mkdir -p $HOME/document/picture
+    ln -s $HOME/repo/archSetup/res/wallPaper ~/document/picture/wallPaper
 }
 
 
@@ -130,7 +127,6 @@ function repo_clone(){
     git clone https://github.com/opottghjk00/slock_rice.git $HOME/repo/slock_rice
     git clone https://github.com/opottghjk00/st_rice.git $HOME/repo/st_rice
     git clone https://github.com/opottghjk00/leet_code_practice.git $HOME/repo/leet_code_practice
-    git clone https://github.com/opottghjk00/dwm_rice.git $HOME/repo/dwm_rice
     git clone https://github.com/opottghjk00/BasicIntegration.jl $HOME/repo/BasicIntegration.jl
     cd $HOME/repo/slock_rice
     sudo make clean install
@@ -153,11 +149,11 @@ function themes_setup(){
 #		             additional setup 		         #
 ##################################################################
 function google_drive_setup(){
-    mkdir -p $HOME/Document/googleDrive/ntu
-    cd $HOME/Document/googleDrive/ntu
+    mkdir -p $HOME/document/googleDrive/ntu
+    cd $HOME/document/googleDrive/ntu
     grive -a
-    mkdir -p $HOME/Document/googleDrive/opo
-    cd $HOME/Document/googleDrive/opo
+    mkdir -p $HOME/document/googleDrive/opo
+    cd $HOME/document/googleDrive/opo
     grive -a
 }
 
