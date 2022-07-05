@@ -72,8 +72,9 @@ function additional_system_setup(){
     cd $HOME/repo/archSetup/res/BetterBattery
     chmod u+x jumpstart.sh
     sudo ./jumpstart.sh
+    git config --global credential.helper store
     # python packages
-    pip install ueberzug
+    pip install ueberzug pipenv
     # julia packages
 }
 
