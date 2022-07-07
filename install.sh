@@ -13,7 +13,7 @@ function basic_packages_install(){
     sudo pacman -S xclip npm wget man-db exa ninja tk tcl xmonad-contrib libnotify fzf
     sudo pacman -S alacritty nitrogen xmonad dunst lxappearance pcmanfm rofi starship
     #additional application
-    sudo pacman -S obs-studio r
+    sudo pacman -S obs-studio r obsidian
 }
 
 
@@ -80,7 +80,13 @@ function additional_system_setup(){
 
 # setup documentation work
 function documentation_setup(){
-    sudo pacman -S gvim neovim zathura evince pandoc texlive-most texlive-lang zathura-pdf-mupdf
+    sudo pacman -S gvim zathura evince pandoc texlive-most texlive-lang zathura-pdf-mupdf
+    cd $HOME/document/open_source/
+    git clone https://github.com/neovim/neovim.git
+    cd neovim
+    git checkout release-0.7
+    make CMAKE_BUILD_TYPE=Release
+    sudo make install
     git clone https://github.com/opottghjk00/nvimIDE.git $HOME/repo/nvimIDE
     ln -s $HOME/repo/nvimIDE $HOME/.config/nvim
 }
@@ -160,7 +166,8 @@ function google_drive_setup(){
 
 
 function virt_manager_set() {
-    sudo aura -S qemu virt-manager ebtables libvirt lxsession
+    LC_ALL=C.UTF-8 lscpu | grep Virtualization
+    yay -S qemu virt-manager ebtables libvirt lxsession
     sudo systemctl enable libvirtd
     sudo systemctl start libvirtd
     sudo usermod -G libvirt -a jacky
