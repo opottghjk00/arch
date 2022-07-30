@@ -9,7 +9,7 @@
 function basic_packages_install(){
     sudo pacman -S linux-lts-headers base-devel gcin noto-fonts-emoji noto-fonts-cjk dkms bc
     sudo pacman -S xorg-xinit xorg-xsetroot xorg-server imlib2 xorg-xrandr btop ranger gimp mpd
-    sudo pacman -S zsh zsh-completions pass unzip neofetch maim picom lazygit firefox
+    sudo pacman -S zsh zsh-completions pass unzip neofetch maim picom firefox
     sudo pacman -S xclip npm wget man-db exa ninja tk tcl xmonad-contrib libnotify fzf
     sudo pacman -S alacritty nitrogen xmonad dunst lxappearance pcmanfm rofi starship
     #additional application
@@ -21,7 +21,7 @@ function basic_packages_install(){
 function AUR_packages_install(){
     [[ ! -d $HOME/document ]] && mkdir $HOME/document
     mkdir -p $HOME/document/open_source
-    git clone https://aur.archlinux.org/yay.git $HOME/Document/open_source/yay
+    git clone https://aur.archlinux.org/yay.git $HOME/document/open_source/yay
     cd $HOME/document/open_source/yay
     makepkg -si
     ###########################################"
@@ -65,6 +65,13 @@ function dotfile_set(){
     git submodule update
 }
 
+
+function pass_setup(){
+    [[ ! -d $HOME/.local/share ]] && mkdir $HOME/.local/share
+    cd $HOME/.local/share/
+    git clone https://gitlab.com/opottghjk00/pass.git password-store
+}
+
 function additional_system_setup(){
     chsh -s /bin/zsh  # change the default shell
     sudo cp $HOME/repo/archSetup/res/utils/30-touchpad.conf /etc/X11/xorg.conf.d/30-touchpad.conf  # enable tap click
@@ -76,6 +83,7 @@ function additional_system_setup(){
     # python packages
     pip install ueberzug pipenv
     # julia packages
+    
 }
 
 # setup documentation work
@@ -131,10 +139,11 @@ function bluetoothDiver_setup(){
 
 # clone repo
 function repo_clone(){
-    git clone https://github.com/opottghjk00/slock_rice.git $HOME/repo/slock_rice
-    git clone https://github.com/opottghjk00/st_rice.git $HOME/repo/st_rice
-    git clone https://github.com/opottghjk00/leet_code_practice.git $HOME/repo/leet_code_practice
-    git clone https://github.com/opottghjk00/BasicIntegration.jl $HOME/repo/BasicIntegration.jl
+    git clone https://github.com/githubjacky/slock_rice.git $HOME/repo/slock_rice
+    git clone https://github.com/githubjacky/st_rice.git $HOME/repo/st_rice
+    git clone https://github.com/githubjacky/leet_code_practice.git $HOME/repo/leet_code_practice
+    git clone https://github.com/githubjacky/ptt_crawler.git $HOME/repo/ptt_crawler
+    git clone https://github.com/githubjacky/SFrontiers.jl.git $HOME/repo/SFrontiers.jl
     cd $HOME/repo/slock_rice
     sudo make clean install
     cd $HOME/repo/st_rice
@@ -201,6 +210,11 @@ echo "###########################################"
 additional_system_setup
 echo -e "\n\n"
 
+echo "###########################################"
+echo "###        password store setup         ###"
+echo "###########################################"
+pass_setup
+echo -e "\n\n"
 
 echo "###########################################"
 echo "###         documentation setup         ###"
