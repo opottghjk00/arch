@@ -68,8 +68,7 @@ function dotfile_set(){
 
 function pass_setup(){
     [[ ! -d $HOME/.local/share ]] && mkdir $HOME/.local/share
-    cd $HOME/.local/share/
-    git clone https://github.com/githubjacky/password-store.git
+    git clone https://github.com/githubjacky/password-store.git $HOME/.local/share/password-store
 }
 
 function additional_system_setup(){
