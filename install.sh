@@ -82,20 +82,27 @@ function additional_system_setup(){
     # python packages
     pip install ueberzug pipenv
     # julia packages
+    # npm packages
+    npm install node-sass
     
 }
 
 # setup documentation work
 function documentation_setup(){
-    sudo pacman -S gvim zathura evince pandoc texlive-most texlive-lang zathura-pdf-mupdf
+    sudo pacman -S gvim zathura evince pandoc zathura-pdf-mupdf 
     cd $HOME/document/open_source/
     git clone https://github.com/neovim/neovim.git
     cd neovim
     git checkout release-0.7
     make CMAKE_BUILD_TYPE=Release
     sudo make install
-    git clone https://github.com/opottghjk00/nvimIDE.git $HOME/repo/nvimIDE
+    git clone https://github.com/githubjacky/nvimIDE.git $HOME/repo/nvimIDE
     ln -s $HOME/repo/nvimIDE $HOME/.config/nvim
+}
+
+
+function latex_setup(){
+    sudo pacman -S texlive-most texlive-lang
 }
 
 
